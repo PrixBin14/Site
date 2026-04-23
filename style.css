@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(252, 227, 231);
+  text-align: center;
+}
+
+* {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+div {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(95, 17, 56);
+    text-align: center;
+}
+
+a {
+    color: rgb(95, 17, 56);
+}
+
+table {
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+    
+}
