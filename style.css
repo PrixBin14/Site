@@ -9,12 +9,6 @@ body {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-div {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 h1 {
     color: rgb(95, 17, 56);
@@ -36,24 +30,120 @@ table {
     font-weight: bolder;
     font-style: italic;
     font-family: 'Mogra', cursive;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(196, 42, 119);
  
 }
 
 #sempre_que_posso_eu {
     font-weight: bolder;
-     font-style: italic;
+    font-style: italic;
     font-family: 'Mogra', cursive;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(196, 42, 119);
 }
 
 #sempre_que_possivel_eu {
     font-weight: bolder;
     font-style: italic;
-        font-family: 'Mogra', cursive;
+    font-family: 'Mogra', cursive;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(196, 42, 119);
 }
-
-
-.mogra-regular {
+.mogra-regular { 
     font-family: 'Mogra', cursive;
     font-weight: 400;
     font-style: normal;
+}
+
+#caixa {
+    font-size: small;
+    color: rgb(5, 5, 5);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(196, 42, 119);
+}
+
+.imagem_um {
+    
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 100%;
+    border: 1px solid rgb(196, 42, 119);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(241, 175, 240, 0.303);
+}
+
+.imagem_dois {
+    
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 100%;
+    border: 1px solid rgb(196, 42, 119);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(241, 175, 240, 0.303);
+}
+
+.imagem_tres {
+    
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border-radius: 100%;
+    border: 1px solid rgb(196, 42, 119);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(241, 175, 240, 0.303);
+}
+
+.imagem_quatro {
+  
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border: 1px solid rgb(196, 42, 119);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(241, 175, 240, 0.303);
+}
+
+/* Remove a altura fixa e o flex que quebra o layout vertical */
+div {
+    display: block;
+    margin: 20px auto;
+    height: auto; /* Permite que o conteúdo defina a altura */
+}
+
+/* Regra única para todas as imagens de seção */
+.imagens {
+    display: block;
+    margin: 20px auto; /* Centraliza a imagem horizontalmente */
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Opcional: bordas arredondadas ficam melhor que círculos para fotos */
+}
+
+/* Ajuste nas classes circulares para que elas não cortem o texto */
+.imagem_um, .imagem_dois, .imagem_tres, .imagem_quatro {
+    display: block;
+    width: fit-content; /* Ajusta ao tamanho da imagem/texto */
+    height: auto;
+    min-width: 250px;
+    border-radius: 20px;
+    border: 1px solid rgb(196, 42, 119);
+    margin: 30px auto; /* Espaçamento entre os blocos */
+    padding: 20px;
+    background-color: rgba(241, 175, 240, 0.303);
+}
+
+/* Espaçamento específico entre parágrafos e imagens */
+section p, .imagem_um p {
+    margin-bottom: 20px; /* Cria o espaço entre o texto e a imagem abaixo dele */
 }
