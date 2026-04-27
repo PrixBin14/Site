@@ -60,13 +60,6 @@ table {
     border: 1px solid rgb(196, 42, 119);
 }
 
-/* Remove a altura fixa e o flex que quebra o layout vertical */
-div {
-    display: block;
-    margin: 20px auto;
-    height: auto; /* Permite que o conteúdo defina a altura */
-}
-
 /* Estilização dos blocos (containers) */
 .imagem_um, .imagem_dois, .imagem_tres, .imagem_quatro {
     display: flex;
@@ -81,15 +74,13 @@ div {
     margin: 20px auto;
     padding: 20px;
     border-radius: 20px;
-    border: 1px solid rgb(196, 42, 119);
-    background-color: rgba(241, 175, 240, 0.303);
+    background-color: rgba(241, 175, 240, 0.175);
     box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
     overflow: hidden; /* Evita que conteúdo saia do bloco */
 }
 
 /* Estilização das imagens dentro dos blocos */
 .imagens {
-    font-family: 'Mogra', cursive;
     width: 300px;  /* Largura fixa para a imagem */
     height: 300px; /* Altura fixa para a imagem */
     object-fit: cover; /* Faz a imagem preencher o quadrado sem esticar */
@@ -102,3 +93,37 @@ div {
 section p, .imagem_um p {
     margin-bottom: 20px; /* Cria o espaço entre o texto e a imagem abaixo dele */
 }
+
+/* Remova o float da div pai */
+.historia {
+    display: block;
+    text-align: left; /* Para o texto não ficar centralizado como o resto do site */
+    margin: 20px auto;
+    width: 90%; /* Dá espaço nas laterais */
+}
+
+/* Aplique o float diretamente na imagem dentro da div */
+.imagem2  {
+    float: left; /* Faz a imagem ir para a esquerda */
+    width: 250px; /* Define um tamanho para a imagem */
+    height: auto;
+    margin-right: 20px; /* Cria espaço entre a imagem e o texto */
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.imagem3  {
+    float: right; /* Faz a imagem ir para a direita */
+    width: 250px; /* Define um tamanho para a imagem */
+    height: auto;
+    margin-left: 20px; /* Cria espaço entre a imagem e o texto */
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+/* Garante que o subtítulo limpe a flutuação se necessário */
+.subtitulo {
+    clear: both; 
+    padding-top: 20px;
+}
+
