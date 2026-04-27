@@ -6,7 +6,7 @@ body {
 }
 
 * {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Mogra', cursive;
 }
 
 
@@ -28,8 +28,7 @@ table {
 
 #sempre_que_vamos_dormir_eu {
     font-weight: bolder;
-    font-style: italic;
-    font-family: 'Mogra', cursive;
+    font-style: italic; 
     margin: 10px;
     padding: 10px;
     border: 1px solid rgb(196, 42, 119);
@@ -39,7 +38,6 @@ table {
 #sempre_que_posso_eu {
     font-weight: bolder;
     font-style: italic;
-    font-family: 'Mogra', cursive;
     margin: 10px;
     padding: 10px;
     border: 1px solid rgb(196, 42, 119);
@@ -48,16 +46,11 @@ table {
 #sempre_que_possivel_eu {
     font-weight: bolder;
     font-style: italic;
-    font-family: 'Mogra', cursive;
     margin: 10px;
     padding: 10px;
     border: 1px solid rgb(196, 42, 119);
 }
-.mogra-regular { 
-    font-family: 'Mogra', cursive;
-    font-weight: 400;
-    font-style: normal;
-}
+
 
 #caixa {
     font-size: small;
@@ -67,53 +60,6 @@ table {
     border: 1px solid rgb(196, 42, 119);
 }
 
-.imagem_um {
-    
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    border-radius: 100%;
-    border: 1px solid rgb(196, 42, 119);
-    margin: 10px;
-    padding: 10px;
-    background-color: rgba(241, 175, 240, 0.303);
-}
-
-.imagem_dois {
-    
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    border-radius: 100%;
-    border: 1px solid rgb(196, 42, 119);
-    margin: 10px;
-    padding: 10px;
-    background-color: rgba(241, 175, 240, 0.303);
-}
-
-.imagem_tres {
-    
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    border-radius: 100%;
-    border: 1px solid rgb(196, 42, 119);
-    margin: 10px;
-    padding: 10px;
-    background-color: rgba(241, 175, 240, 0.303);
-}
-
-.imagem_quatro {
-  
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    border: 1px solid rgb(196, 42, 119);
-    margin: 10px;
-    padding: 10px;
-    background-color: rgba(241, 175, 240, 0.303);
-}
-
 /* Remove a altura fixa e o flex que quebra o layout vertical */
 div {
     display: block;
@@ -121,26 +67,35 @@ div {
     height: auto; /* Permite que o conteúdo defina a altura */
 }
 
-/* Regra única para todas as imagens de seção */
-.imagens {
-    display: block;
-    margin: 20px auto; /* Centraliza a imagem horizontalmente */
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px; /* Opcional: bordas arredondadas ficam melhor que círculos para fotos */
-}
-
-/* Ajuste nas classes circulares para que elas não cortem o texto */
+/* Estilização dos blocos (containers) */
 .imagem_um, .imagem_dois, .imagem_tres, .imagem_quatro {
-    display: block;
-    width: fit-content; /* Ajusta ao tamanho da imagem/texto */
-    height: auto;
-    min-width: 250px;
+    display: flex;
+    flex-direction: column; /* Alinha texto e imagem verticalmente */
+    justify-content: center;
+    align-items: center;
+    
+    /* Define o tamanho fixo e idêntico para todos os blocos */
+    width: 400px; 
+    height: 550px; 
+    
+    margin: 20px auto;
+    padding: 20px;
     border-radius: 20px;
     border: 1px solid rgb(196, 42, 119);
-    margin: 30px auto; /* Espaçamento entre os blocos */
-    padding: 20px;
     background-color: rgba(241, 175, 240, 0.303);
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
+    overflow: hidden; /* Evita que conteúdo saia do bloco */
+}
+
+/* Estilização das imagens dentro dos blocos */
+.imagens {
+    font-family: 'Mogra', cursive;
+    width: 300px;  /* Largura fixa para a imagem */
+    height: 300px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Faz a imagem preencher o quadrado sem esticar */
+    border-radius: 10px;
+    margin-top: 15px; /* Espaço entre o texto e a imagem */
+    
 }
 
 /* Espaçamento específico entre parágrafos e imagens */
