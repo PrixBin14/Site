@@ -20,10 +20,10 @@ h2 {
     color: rgb(95, 17, 56);
     text-align: center;
     font-family: 'Mogra', cursive;
-    clear: both; /* Isso obriga o h2 a descer para baixo de qualquer imagem com float */
+    clear: both; 
     display: block;
     width: 100%;
-    padding-top: 20px; /* Um espacinho extra para não grudar no texto de cima */
+    padding-top: 20px; 
 }
 
 a {
@@ -65,6 +65,8 @@ table {
     margin: 10px;
     padding: 10px;
     text-align: center;
+    border: 2px solid rgb(95, 17, 56);
+    border-radius: 10px;
 }
 
 .imagem_um, .imagem_dois, .imagem_tres, .imagem_quatro {
@@ -89,15 +91,14 @@ table {
 .imagens {
     width: 300px;  
     height: 300px; 
-    object-fit: cover; /* Faz a imagem preencher o quadrado sem esticar */
+    object-fit: cover; 
     border-radius: 10px;
-    margin-top: 15px; /* Espaço entre o texto e a imagem */
+    margin-top: 15px; 
     
 }
 
-/* Espaçamento específico entre parágrafos e imagens */
 section p, .imagem_um p {
-    margin-bottom: 20px; /* Cria o espaço entre o texto e a imagem abaixo dele */
+    margin-bottom: 20px; 
 }
 
 .historia {
@@ -125,7 +126,6 @@ section p, .imagem_um p {
     border-radius: 15px;
 }
 
-/* Garante que o subtítulo limpe a flutuação se necessário */
 .subtitulo {
     clear: both; 
     padding-top: 20px;
@@ -137,11 +137,11 @@ section p, .imagem_um p {
    right: 20px;       
    width: 80px;      
    height: auto;
-   z-index: 1000;     /* Garante que a imagem fique por cima de outros elementos */
+   z-index: 1000;     
 }
 
 .imagem_rodape img {
-    width: 100%;      /* Faz a imagem preencher toda a div */
+    width: 100%;
     height: auto;
 }
 
@@ -191,7 +191,7 @@ textarea, input[type="text"], input[type="email"], select {
 }
 
 @media (max-width: 768px) {
-    /* Faz as imagens da história ocuparem a largura toda e pararem de flutuar */
+   
     .imagem2, .imagem3 {
         float: none;
         display: block;
@@ -199,28 +199,28 @@ textarea, input[type="text"], input[type="email"], select {
         width: 80%;
     }
 
-    /* Ajusta o texto para não ficar espremido no celular */
+    
     .historia {
         width: 95%;
         text-align: center;
     }
 
-    /* Garante que as imagens principais não fiquem gigantes */
+
     .imagens {
         width: 100%;
         max-width: 300px;
         height: auto;
     }
 
-    /* Permite que a tabela tenha rolagem lateral se for muito larga */
-    table {
+  
+    .table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
         width: 100%;
     }
     
-    /* Esconde o ícone flutuante do rodapé se ele atrapalhar a leitura */
+   
     .imagem_rodape {
         width: 50px;
     }
