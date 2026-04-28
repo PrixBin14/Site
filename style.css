@@ -6,13 +6,24 @@ body {
 }
 
 * {
-  font-family: 'Mogra', cursive;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 
 h1 {
     color: rgb(95, 17, 56);
     text-align: center;
+    font-family: 'Mogra', cursive;
+}
+
+h2 {
+    color: rgb(95, 17, 56);
+    text-align: center;
+    font-family: 'Mogra', cursive;
+    clear: both; /* Isso obriga o h2 a descer para baixo de qualquer imagem com float */
+    display: block;
+    width: 100%;
+    padding-top: 20px; /* Um espacinho extra para não grudar no texto de cima */
 }
 
 a {
@@ -31,8 +42,6 @@ table {
     font-style: italic; 
     margin: 10px;
     padding: 10px;
-    border: 1px solid rgb(196, 42, 119);
- 
 }
 
 #sempre_que_posso_eu {
@@ -40,7 +49,6 @@ table {
     font-style: italic;
     margin: 10px;
     padding: 10px;
-    border: 1px solid rgb(196, 42, 119);
 }
 
 #sempre_que_possivel_eu {
@@ -48,7 +56,6 @@ table {
     font-style: italic;
     margin: 10px;
     padding: 10px;
-    border: 1px solid rgb(196, 42, 119);
 }
 
 
@@ -57,10 +64,8 @@ table {
     color: rgb(5, 5, 5);
     margin: 10px;
     padding: 10px;
-    border: 1px solid rgb(196, 42, 119);
 }
 
-/* Estilização dos blocos (containers) */
 .imagem_um, .imagem_dois, .imagem_tres, .imagem_quatro {
     display: flex;
     flex-direction: column; /* Alinha texto e imagem verticalmente */
@@ -81,8 +86,8 @@ table {
 
 /* Estilização das imagens dentro dos blocos */
 .imagens {
-    width: 300px;  /* Largura fixa para a imagem */
-    height: 300px; /* Altura fixa para a imagem */
+    width: 300px;  
+    height: 300px; 
     object-fit: cover; /* Faz a imagem preencher o quadrado sem esticar */
     border-radius: 10px;
     margin-top: 15px; /* Espaço entre o texto e a imagem */
@@ -94,29 +99,27 @@ section p, .imagem_um p {
     margin-bottom: 20px; /* Cria o espaço entre o texto e a imagem abaixo dele */
 }
 
-/* Remova o float da div pai */
 .historia {
     display: block;
-    text-align: left; /* Para o texto não ficar centralizado como o resto do site */
+    text-align: left; 
     margin: 20px auto;
-    width: 90%; /* Dá espaço nas laterais */
+    width: 90%; 
 }
 
-/* Aplique o float diretamente na imagem dentro da div */
 .imagem2  {
-    float: left; /* Faz a imagem ir para a esquerda */
-    width: 250px; /* Define um tamanho para a imagem */
+    float: left; 
+    width: 250px; 
     height: auto;
-    margin-right: 20px; /* Cria espaço entre a imagem e o texto */
+    margin-right: 20px; 
     margin-bottom: 10px;
     border-radius: 15px;
 }
 
 .imagem3  {
-    float: right; /* Faz a imagem ir para a direita */
-    width: 250px; /* Define um tamanho para a imagem */
+    float: right; 
+    width: 250px; 
     height: auto;
-    margin-left: 20px; /* Cria espaço entre a imagem e o texto */
+    margin-left: 20px; 
     margin-bottom: 10px;
     border-radius: 15px;
 }
@@ -127,3 +130,61 @@ section p, .imagem_um p {
     padding-top: 20px;
 }
 
+.imagem_rodape {
+   position: fixed;   
+   bottom: 20px;      
+   right: 20px;       
+   width: 80px;      
+   height: auto;
+   z-index: 1000;     /* Garante que a imagem fique por cima de outros elementos */
+}
+
+.imagem_rodape img {
+    width: 100%;      /* Faz a imagem preencher toda a div */
+    height: auto;
+}
+
+.momentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
+    gap: 20px; /* Espaçamento entre os blocos */
+    margin: 20px auto;
+    width: 100%; /* Largura total do grid */
+}
+
+.img_grid {
+    width: 250px;           
+    height: 250px;          
+    object-fit: cover;      
+    border-radius: 50%;     
+    
+    background-color: rgba(241, 175, 240, 0.175);
+    padding: 30px;          
+    
+    margin: 20px auto;
+    display: block;         
+    box-sizing: border-box; 
+}
+
+.secao-contato {
+    max-width: 600px;    
+    margin: 40px auto;   
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea, input[type="text"], input[type="email"], select {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(95, 17, 56);
+    padding: 8px;
+}
