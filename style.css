@@ -69,23 +69,23 @@ table {
 
 .imagem_um, .imagem_dois, .imagem_tres, .imagem_quatro {
     display: flex;
-    flex-direction: column; /* Alinha texto e imagem verticalmente */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    /* Define o tamanho fixo e idêntico para todos os blocos */
-    width: 400px; 
-    height: 550px; 
+    width: 90%; 
+    max-width: 400px; 
+    height: auto; 
+    min-height: 500px;
     
     margin: 20px auto;
     padding: 20px;
     border-radius: 20px;
     background-color: rgba(241, 175, 240, 0.175);
-    box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
-    overflow: hidden; /* Evita que conteúdo saia do bloco */
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* Estilização das imagens dentro dos blocos */
 .imagens {
     width: 300px;  
     height: 300px; 
@@ -147,21 +147,21 @@ section p, .imagem_um p {
 
 .momentos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
-    gap: 20px; /* Espaçamento entre os blocos */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
     margin: 20px auto;
-    width: 100%; /* Largura total do grid */
+    width: 95%;
 }
 
 .img_grid {
-    width: 250px;           
-    height: 250px;          
+    width: 100%;
+    max-width: 250px;           
+    height: auto;
+    aspect-ratio: 1 / 1; 
     object-fit: cover;      
     border-radius: 50%;     
-    
     background-color: rgba(241, 175, 240, 0.175);
-    padding: 30px;          
-    
+    padding: 20px;          
     margin: 20px auto;
     display: block;         
     box-sizing: border-box; 
@@ -188,4 +188,40 @@ textarea, input[type="text"], input[type="email"], select {
     border-radius: 10px;
     border: 1px solid rgb(95, 17, 56);
     padding: 8px;
+}
+
+@media (max-width: 768px) {
+    /* Faz as imagens da história ocuparem a largura toda e pararem de flutuar */
+    .imagem2, .imagem3 {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    /* Ajusta o texto para não ficar espremido no celular */
+    .historia {
+        width: 95%;
+        text-align: center;
+    }
+
+    /* Garante que as imagens principais não fiquem gigantes */
+    .imagens {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* Permite que a tabela tenha rolagem lateral se for muito larga */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+    }
+    
+    /* Esconde o ícone flutuante do rodapé se ele atrapalhar a leitura */
+    .imagem_rodape {
+        width: 50px;
+    }
 }
