@@ -225,3 +225,12 @@ textarea, input[type="text"], input[type="email"], select {
         width: 50px;
     }
 }
+
+.calculadora {
+    font-size: large;
+    color: rgb(95, 17, 56);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
