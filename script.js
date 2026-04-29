@@ -6,7 +6,7 @@ function CalcularAmor() {
         Swal.fire({
             title: 'É muito amor!',
             text: 'Vocês foram feitos um para o outro!',
-            imageUrl: 'vetor.png', // Aqui entra sua imagem
+            imageUrl: 'vetor.png', 
             imageWidth: 150,
             imageHeight: 'auto',
             imageAlt: 'Ícone de Amor',
